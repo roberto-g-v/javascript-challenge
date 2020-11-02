@@ -1,3 +1,4 @@
+html,
 body{
     background-color: #efeee7;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -14,21 +15,22 @@ header{
 
 h1{
     color: #eeeeee;
-    font-size: 28px;
+    font-size: 120px;
     margin-left: 45%;
-    top: 10%;
+    top: 1%;
     padding: 20px;
 }
 
 h2{
-    font-size: 24px;
+    font-size: 80px;
 }
 
 .container{
     width: 1024px;
-    margin: 0 auto;
+    margin: 0 top;
 }
 
+}
 #main-bio{
     width: 70%;
 }
@@ -53,7 +55,7 @@ h2{
     bottom: -1px;
     background-color: #333333;
     text-align: center ;
-    color: #efeee7;
+    color: black;
 }
 
 .box {
@@ -80,8 +82,9 @@ h2{
 
 /* Carousel base class */
 .carousel {
-    margin-bottom: 4rem;
-    position: relative;
+    margin-top: 4rem;
+    color: #000;
+    position: top;
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel.pointer-event {
@@ -89,13 +92,13 @@ h2{
   }
 
 .carousel-inner {
-    position: relative;
-    width: 100%;
+    position: top;
+    width: 200%;
     overflow: hidden;
   }
   
   .carousel-caption {
-    bottom: 3rem;
+    top: 3rem;
     z-index: 10;
   }
   
@@ -105,97 +108,84 @@ h2{
   }
   .carousel-item > img {
     position: absolute;
-    top: 0;
+    top: 10;
     left: 0;
     min-width: 100%;
-    height: 32rem;
+    height: 30rem;
   }
 
-/*   
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
+/*_________The styles for the parallax________*/
+.hero {
+  position: relative;
+  height: 500px;
+  padding: 20px;
+  margin: 0;
+  background: black;
+  background-image: url("images/alien.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  border-bottom-style: groove; 
+  border-bottom-color: rgb(0, 8, 90, 0.7);}
+
+.hero h1 {
+  margin-top: 150px;
+  font-size: 53px;
+  animation: title 1.5s forwards linear;
+  font-family: Space;
+  text-shadow: 2px 2px 5px rgb(0, 0, 34);}
+
+.hero p {
+  font-size: 2.3rem;
+  opacity: 0;
+  font-family: Space;
+  text-shadow: 2px 2px 4px rgb(0, 0, 34);
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 0.8s;}
+
+.container {
+  background-color: rgb(0, 0, 40);
+  background-image: url("images/space");}
+
+.loader {
+  margin-top: 50px;}
+
+.margin-top-50 {
+  margin-top: 50px;}
+  
+  
+  
+/*_________Table__________*/
+table {
+  border-style: groove;
+  border-color: rgb(0, 8, 90);
+  background-color: rgb(0, 0, 60, 0.5);
+  background-image: url("../images/stars.jpg");
+  background-blend-mode: luminosity;
+  overflow-y: scroll;
+  height: 550px;
   display: block;
-}
-.carousel-item-next:not(.carousel-item-left),
-.active.carousel-item-right {
-  transform: translateX(100%);
-}
-.carousel-item-prev:not(.carousel-item-right),
-.active.carousel-item-left {
-  transform: translateX(-100%);
-}
-.carousel-fade {
-      opacity: 0;
-      transition-property: opacity;
-      transform: none;
-    }
-  
-.carousel-item.active,
-.carousel-item-next.carousel-item-left,
-.carousel-item-prev.carousel-item-right {
-      z-index: 1;
-      opacity: 1;
-      transition: 1s;
-    }
-  
-.active.carousel-item-left,
-.active.carousel-item-right {
-      z-index: 0;
-      opacity: 0;
-      transition: 1s;
-    }  
-.carousel-control-prev {
-    left: 0;
-    background-image: linear-gradient(90deg, rgba(black, .25), rgba(black, .001));
-        
-    }
-.carousel-control-next {
-    right: 0;
-    background-image: linear-gradient(270deg, rgba(black, .25), rgba(black, .001));
-      }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    display: inline-block;
-    width: auto;
-    height:auto;
-    background: no-repeat 50% / 100% 100%;
-}
-.carousel-control-prev-icon {
-    background-image: escape-svg;
-      }
-.carousel-control-next-icon {
-        background-image: escape-svg;
-      }
-      
-  
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0; 
-    margin-right: carousel-control-width;
-    margin-left: carousel-control-width;
-    list-style: none;
-  
-      width: carousel-indicator-width;
-      height:carousel-indicator-height;
-      margin-right: carousel-indicator-spacer;
-      margin-left: carousel-indicator-spacer;
-      text-indent: -999px;
-      cursor: pointer;
-      background-color: carousel-indicator-active-bg;
-      background-clip: padding-box;
-      
-      border-top: carousel-indicator-hit-area-height solid transparent;
-      border-bottom: carousel-indicator-hit-area-height solid transparent;
-      opacity: .5;
-      transition: step-start;
-} */
+  font-weight: 5px;}
+
+#table-area th {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 4px;
+  background-color: rgb(0, 0, 35);}
+
+#table-area tr {
+  text-align: center;
+  background-color: rgb(0, 0, 43, 0.7);
+  font-size: 13px;
+  font-weight: 4px;}
+
+tbody > tr:nth-child(2n+1) > td, tbody > tr:nth-child(2n+1) > th {
+  background-color: rgb(0, 0, 27); }
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;}
   
 
 /* RESPONSIVE CSS
